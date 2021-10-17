@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Seguridad;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace Win.TiendaCelulares
 {
     public partial class FormProductos : Form
     {
+        
+        ProductosBL _productos;
+
         public FormProductos()
         {
             InitializeComponent();
+
+            _productos = new ProductosBL();
+            productoBindingSource1.DataSource = _productos.ObtenerProductos();
         }
+
     }
 }
