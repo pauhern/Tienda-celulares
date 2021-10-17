@@ -65,6 +65,15 @@ namespace BL.Seguridad
         {
             return ListaProducto;
         }
+
+        public bool GuardarProducto(Producto producto)
+        {
+            if (producto.Id == 0)
+            {
+                producto.Id = ListaProducto.Max(item => item.Id) + 1;
+            }
+            return true;
+        }
     }
 
     public class Producto

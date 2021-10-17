@@ -54,6 +54,7 @@
             this.existenciaTextBox1 = new System.Windows.Forms.TextBox();
             this.idTextBox1 = new System.Windows.Forms.TextBox();
             this.precioTextBox1 = new System.Windows.Forms.TextBox();
+            this.Cancelar = new System.Windows.Forms.ToolStripButton();
             activoLabel = new System.Windows.Forms.Label();
             descripcionLabel = new System.Windows.Forms.Label();
             existenciaLabel = new System.Windows.Forms.Label();
@@ -70,10 +71,10 @@
             // 
             // productoBindingSource1BindingNavigator
             // 
-            this.productoBindingSource1BindingNavigator.AddNewItem = this.toolStripButton5;
+            this.productoBindingSource1BindingNavigator.AddNewItem = null;
             this.productoBindingSource1BindingNavigator.BindingSource = this.productoBindingSource1;
             this.productoBindingSource1BindingNavigator.CountItem = this.toolStripLabel1;
-            this.productoBindingSource1BindingNavigator.DeleteItem = this.toolStripButton6;
+            this.productoBindingSource1BindingNavigator.DeleteItem = null;
             this.productoBindingSource1BindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
@@ -86,7 +87,8 @@
             this.toolStripSeparator3,
             this.toolStripButton5,
             this.toolStripButton6,
-            this.productoBindingSource1BindingNavigatorSaveItem});
+            this.productoBindingSource1BindingNavigatorSaveItem,
+            this.Cancelar});
             this.productoBindingSource1BindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.productoBindingSource1BindingNavigator.MoveFirstItem = this.toolStripButton1;
             this.productoBindingSource1BindingNavigator.MoveLastItem = this.toolStripButton4;
@@ -186,11 +188,11 @@
             // productoBindingSource1BindingNavigatorSaveItem
             // 
             this.productoBindingSource1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.productoBindingSource1BindingNavigatorSaveItem.Enabled = false;
             this.productoBindingSource1BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("productoBindingSource1BindingNavigatorSaveItem.Image")));
             this.productoBindingSource1BindingNavigatorSaveItem.Name = "productoBindingSource1BindingNavigatorSaveItem";
             this.productoBindingSource1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.productoBindingSource1BindingNavigatorSaveItem.Text = "Guardar datos";
+            this.productoBindingSource1BindingNavigatorSaveItem.Click += new System.EventHandler(this.productoBindingSource1BindingNavigatorSaveItem_Click);
             // 
             // activoLabel
             // 
@@ -278,6 +280,16 @@
             this.precioTextBox1.Size = new System.Drawing.Size(206, 20);
             this.precioTextBox1.TabIndex = 10;
             // 
+            // Cancelar
+            // 
+            this.Cancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Cancelar.Image = ((System.Drawing.Image)(resources.GetObject("Cancelar.Image")));
+            this.Cancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(57, 22);
+            this.Cancelar.Text = "Cancelar";
+            this.Cancelar.Visible = false;
+            // 
             // FormProductos
             // 
             this.ClientSize = new System.Drawing.Size(447, 379);
@@ -343,5 +355,6 @@
         private System.Windows.Forms.TextBox existenciaTextBox1;
         private System.Windows.Forms.TextBox idTextBox1;
         private System.Windows.Forms.TextBox precioTextBox1;
+        private System.Windows.Forms.ToolStripButton Cancelar;
     }
 }
