@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace BL.Seguridad
 { // Creamos la Clase Producto:
     public class ProductosBL
     {
         public BindingList<Producto> ListaProducto { get; set; }
 
-        public ProductosBL() 
+        public ProductosBL()
         { //declaramos la lista de tipo producto
             ListaProducto = new BindingList<Producto>();
             //Declaramos productos prueba:
@@ -74,14 +75,41 @@ namespace BL.Seguridad
             }
             return true;
         }
+
+        public void AgregarProducto()
+        {
+            var nuevoProducto = new Producto();
+            ListaProducto.Add(nuevoProducto);
+        }
+
+
+        public bool EliminarProducto(int id)
+        {
+            foreach (var producto in ListaProducto)
+            {
+                if (producto.Id == id)
+                {
+                    ListaProducto.Remove(producto);
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 
     public class Producto
-    {//aqui declaramos las propiedades de la clase producto
+
+    //aqui declaramos las propiedades de la clase producto
+
+    {
         public int Id { get; set; }
         public string Descripcion { get; set; }
         public double Precio { get; set; }
         public int Existencia { get; set; }
         public bool Activo { get; set; }
     }
-}
+  }
+
+
+
