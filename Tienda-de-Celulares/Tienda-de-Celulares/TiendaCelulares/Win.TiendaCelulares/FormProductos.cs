@@ -35,7 +35,7 @@ namespace Win.TiendaCelulares
             if (resultado.Exitoso == true)
             {
                 productoBindingSource1.ResetBindings(false);
-                DeshabilitarHabilitarBotones(true);
+                
 
             }
 
@@ -51,32 +51,14 @@ namespace Win.TiendaCelulares
             _productos.AgregarProducto();
             productoBindingSource1.MoveLast();
 
-            DeshabilitarHabilitarBotones(false);
-
-
+            
         }
 
-        private void DeshabilitarHabilitarBotones(bool valor)
-        {
-            {
-
-
-                bindingNavigatorMoveFirstItem.Enabled = valor;
-                bindingNavigatorMoveLastItem.Enabled = valor;
-                bindingNavigatorMovePreviousItem.Enabled = valor;
-                bindingNavigatorMoveNextItem.Enabled = valor;
-
-                bindingNavigatorAddNewItem.Enabled = valor;
-                bindingNavigatorDeleteItem.Enabled = valor;
-                Cancelar.Visible = !valor;
-
-            }
-        }
-
+       
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
 
-            if (idTextBox.Text != "")
+            
             {
                 var resultado = MessageBox.Show("Desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
@@ -106,11 +88,17 @@ namespace Win.TiendaCelulares
 
         private void Cancelar_Click(object sender, EventArgs e)
         {
-            DeshabilitarHabilitarBotones(true);
+            
             Eliminar(0);
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+    }
+
         
 
         
