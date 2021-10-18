@@ -32,14 +32,16 @@ namespace Win.TiendaCelulares
             var producto = (Producto)productoBindingSource1.Current;
             var resultado = _productos.GuardarProducto(producto);
 
-            if (resultado == true)
+            if (resultado.Exitoso == true)
             {
                 productoBindingSource1.ResetBindings(false);
+                DeshabilitarHabilitarBotones(true);
+
             }
 
             else
             {
-                MessageBox.Show("Ocurrio un error guardando el producto");
+                MessageBox.Show(resultado.Mensaje);
             }
 
         }
@@ -49,51 +51,71 @@ namespace Win.TiendaCelulares
             _productos.AgregarProducto();
             productoBindingSource1.MoveLast();
 
-            DeshabilitarHabilitarBotones(true);
+            DeshabilitarHabilitarBotones(false);
+
+
         }
 
         private void DeshabilitarHabilitarBotones(bool valor)
         {
-            bindingNavigatorMoveFirstItem.Enabled = valor;
-            bindingNavigatorMoveLastItem.Enabled = valor;
-            bindingNavigatorMovePreviousItem.Enabled = valor;
-            bindingNavigatorMoveNextItem.Enabled = valor;
-            bindingNavigatorPositionItem.Enabled = valor;
-            bindingNavigatorAddNewItem.Enabled = valor;
-            bindingNavigatorDeleteItem.Enabled = valor;
-            Cancelar.Visible = !valor;
+            {
 
+
+                bindingNavigatorMoveFirstItem.Enabled = valor;
+                bindingNavigatorMoveLastItem.Enabled = valor;
+                bindingNavigatorMovePreviousItem.Enabled = valor;
+                bindingNavigatorMoveNextItem.Enabled = valor;
+
+                bindingNavigatorAddNewItem.Enabled = valor;
+                bindingNavigatorDeleteItem.Enabled = valor;
+                Cancelar.Visible = !valor;
+
+            }
         }
 
-        
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
+
+            if (idTextBox.Text != "")
             {
-                if (idTextBox.Text != "")
+                var resultado = MessageBox.Show("Desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
                 {
-
                     var id = Convert.ToInt32(idTextBox.Text);
-                    var resultado = _productos.EliminarProducto(id);
-
-                    if (resultado == true)
-                    {
-                        productoBindingSource1.ResetBindings(false);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ocurrio un error eliminando el producto");
-                    }
+                    Eliminar(id);
                 }
-            }
 
+
+            }
         }
 
-        private void toolStripButton7_Click_1(object sender, EventArgs e)
+        private void Eliminar(int id)
         {
 
+            var resultado = _productos.EliminarProducto(id);
+
+            if (resultado == true)
+            {
+                productoBindingSource1.ResetBindings(false);
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error eliminando el producto");
+            }
+        }
+
+        private void Cancelar_Click(object sender, EventArgs e)
+        {
+            DeshabilitarHabilitarBotones(true);
+            Eliminar(0);
         }
     }
 }
+        
+
+        
+    
+
 
     
 

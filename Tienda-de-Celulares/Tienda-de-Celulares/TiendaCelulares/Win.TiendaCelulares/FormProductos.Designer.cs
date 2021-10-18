@@ -48,6 +48,7 @@ namespace Win.TiendaCelulares
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripLabel();
             this.productoBindingSource1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
@@ -57,7 +58,6 @@ namespace Win.TiendaCelulares
             this.existenciaTextBox1 = new System.Windows.Forms.TextBox();
             this.idTextBox1 = new System.Windows.Forms.TextBox();
             this.precioTextBox1 = new System.Windows.Forms.TextBox();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripButton();
             activoLabel = new System.Windows.Forms.Label();
             descripcionLabel = new System.Windows.Forms.Label();
             existenciaLabel = new System.Windows.Forms.Label();
@@ -212,7 +212,17 @@ namespace Win.TiendaCelulares
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click_1);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.RightToLeftAutoMirrorImage = true;
+            this.toolStripLabel1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripLabel1.Text = "de {0}";
+            this.toolStripLabel1.ToolTipText = "Número total de elementos";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // toolStripButton5
             // 
@@ -247,6 +257,7 @@ namespace Win.TiendaCelulares
             this.Cancelar.Size = new System.Drawing.Size(57, 22);
             this.Cancelar.Text = "Cancelar";
             this.Cancelar.Visible = false;
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // activoCheckBox1
             // 
@@ -278,6 +289,7 @@ namespace Win.TiendaCelulares
             this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource1, "Id", true));
             this.idTextBox1.Location = new System.Drawing.Point(118, 167);
             this.idTextBox1.Name = "idTextBox1";
+            this.idTextBox1.ReadOnly = true;
             this.idTextBox1.Size = new System.Drawing.Size(206, 20);
             this.idTextBox1.TabIndex = 8;
             // 
@@ -288,17 +300,6 @@ namespace Win.TiendaCelulares
             this.precioTextBox1.Name = "precioTextBox1";
             this.precioTextBox1.Size = new System.Drawing.Size(206, 20);
             this.precioTextBox1.TabIndex = 10;
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.RightToLeftAutoMirrorImage = true;
-            this.toolStripLabel1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripLabel1.Text = "de {0}";
-            this.toolStripLabel1.ToolTipText = "Número total de elementos";
-            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // FormProductos
             // 
