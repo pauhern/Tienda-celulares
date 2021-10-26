@@ -130,20 +130,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Properties\DataSources\BL.Seguridad.Producto.datasource" />
-    <None Include="Properties\DataSources\BL.Seguridad.ProductosBL.datasource" />
-    <None Include="Properties\DataSources\BL.Seguridad.SeguridadBL.datasource" />
-    <None Include="Properties\DataSources\FormClientes.datasource" />
-    <None Include="Properties\DataSources\FormLogin.datasource" />
-    <None Include="Properties\DataSources\FormMenu.datasource" />
-    <None Include="Properties\DataSources\FormProductos.datasource" />
-    <None Include="Properties\DataSources\FormReportedeclientes.datasource" />
-    <None Include="Properties\DataSources\FormReportedeproductos.datasource" />
-    <None Include="Properties\DataSources\FormTransferencias.datasource" />
-    <None Include="Properties\DataSources\FormVentas.datasource" />
-    <None Include="Properties\DataSources\Program.datasource" />
-    <None Include="Properties\DataSources\Win.TiendaCelulares.Properties.Resources.datasource" />
-    <None Include="Properties\DataSources\Win.TiendaCelulares.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -162,12 +148,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BL.Seguridad\BL.Seguridad.csproj">
-      <Project>{7CA79E0E-F7B3-4B97-AAAB-D8436A95E106}</Project>
-      <Name>BL.Seguridad</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
