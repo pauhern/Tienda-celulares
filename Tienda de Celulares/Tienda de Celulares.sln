@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win.TiendaCelulares", "Tienda de Celulares\Win.TiendaCelulares.csproj", "{8F6AB2B3-EB45-48E2-A5C3-C8C0A10B70C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL.Rentas", "Bl.Rentas\BL.Rentas.csproj", "{929A68B0-55A9-44AE-A4F0-6A108D65FA8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F6AB2B3-EB45-48E2-A5C3-C8C0A10B70C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F6AB2B3-EB45-48E2-A5C3-C8C0A10B70C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F6AB2B3-EB45-48E2-A5C3-C8C0A10B70C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F6AB2B3-EB45-48E2-A5C3-C8C0A10B70C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{929A68B0-55A9-44AE-A4F0-6A108D65FA8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929A68B0-55A9-44AE-A4F0-6A108D65FA8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929A68B0-55A9-44AE-A4F0-6A108D65FA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929A68B0-55A9-44AE-A4F0-6A108D65FA8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
