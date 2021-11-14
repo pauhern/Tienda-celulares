@@ -1,0 +1,5 @@
+﻿1>------ Operación Compilar iniciada: proyecto: BL.Rentas, configuración: Debug Any CPU ------
+1>G:\ceci\Bl.Rentas\TiposBL.cs(24,13,24,28): error CS1929: 'object' no contiene una definición para 'Load' y la mejor sobrecarga del método de extensión 'QueryableExtensions.Load(IQueryable)' requiere un receptor del tipo 'IQueryable'
+1>G:\ceci\Bl.Rentas\TiposBL.cs(25,42,25,47): error CS1061: 'object' no contiene una definición para 'Local' ni se encuentra ningún método de extensión 'Local' que acepte un primer argumento del tipo 'object' (¿falta alguna directiva using o una referencia de ensamblado?)
+1>G:\ceci\Bl.Rentas\Contexto.cs(13,25,13,30): warning CS0649: El campo 'Contexto.Tipos' nunca se asigna y siempre tendrá el valor predeterminado null
+2>------ Operación Compilar iniciada: proyecto: Win.TiendaCelulares, configuración: Debug Any CPU ------
