@@ -53,5 +53,12 @@ namespace Tienda_de_Celulares
         {
             Login();
         }
+
+        private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteProductos = new FormReporteProductos();
+            formReporteProductos.MdiParent = this;
+            formReporteProductos.Show();
+        }
     }
 }
