@@ -16,10 +16,7 @@ namespace Tienda_de_Celulares
         public FormReporteProductos()
         {
             InitializeComponent();
-        }
 
-        private void FormReporteProductos_Load(object sender, EventArgs e)
-        {
             var _productoBL = new ProductosBL();
             var bindingSource = new BindingSource();
             bindingSource.DataSource = _productoBL.ObtenerProductos();
@@ -29,7 +26,6 @@ namespace Tienda_de_Celulares
 
             crystalReportViewer1.ReportSource = reporte;
             crystalReportViewer1.RefreshReport();
-
         }
     }
 }

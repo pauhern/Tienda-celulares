@@ -34,6 +34,8 @@ namespace Tienda_de_Celulares {
         
         private global::System.Data.DataRelation relationCategoria_Producto;
         
+        private global::System.Data.DataRelation relationCategoria_Producto1;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -248,6 +250,7 @@ namespace Tienda_de_Celulares {
             }
             this.relationTipo_Producto = this.Relations["Tipo_Producto"];
             this.relationCategoria_Producto = this.Relations["Categoria_Producto"];
+            this.relationCategoria_Producto1 = this.Relations["Categoria_Producto1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -272,6 +275,10 @@ namespace Tienda_de_Celulares {
                         this.tableCategoria.IdColumn}, new global::System.Data.DataColumn[] {
                         this.tableProducto.CategoriaIdColumn}, false);
             this.Relations.Add(this.relationCategoria_Producto);
+            this.relationCategoria_Producto1 = new global::System.Data.DataRelation("Categoria_Producto1", new global::System.Data.DataColumn[] {
+                        this.tableCategoria.DescripcionColumn}, new global::System.Data.DataColumn[] {
+                        this.tableProducto.DescripcionColumn}, false);
+            this.Relations.Add(this.relationCategoria_Producto1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -513,17 +520,20 @@ namespace Tienda_de_Celulares {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ProductoRow AddProductoRow(string Descripcion, double Precio, int Existencia, CategoriaRow parentCategoriaRowByCategoria_Producto, TipoRow parentTipoRowByTipo_Producto, byte[] Foto, bool Activo) {
+            public ProductoRow AddProductoRow(CategoriaRow parentCategoriaRowByCategoria_Producto1, double Precio, int Existencia, CategoriaRow parentCategoriaRowByCategoria_Producto, TipoRow parentTipoRowByTipo_Producto, byte[] Foto, bool Activo) {
                 ProductoRow rowProductoRow = ((ProductoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Descripcion,
+                        null,
                         Precio,
                         Existencia,
                         null,
                         null,
                         Foto,
                         Activo};
+                if ((parentCategoriaRowByCategoria_Producto1 != null)) {
+                    columnValuesArray[1] = parentCategoriaRowByCategoria_Producto1[1];
+                }
                 if ((parentCategoriaRowByCategoria_Producto != null)) {
                     columnValuesArray[4] = parentCategoriaRowByCategoria_Producto[0];
                 }
@@ -1418,6 +1428,17 @@ namespace Tienda_de_Celulares {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public CategoriaRow CategoriaRowByCategoria_Producto1 {
+                get {
+                    return ((CategoriaRow)(this.GetParentRow(this.Table.ParentRelations["Categoria_Producto1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Categoria_Producto1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDescripcionNull() {
                 return this.IsNull(this.tableProducto.DescripcionColumn);
             }
@@ -1502,6 +1523,17 @@ namespace Tienda_de_Celulares {
                 }
                 else {
                     return ((ProductoRow[])(base.GetChildRows(this.Table.ChildRelations["Categoria_Producto"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ProductoRow[] GetProductoRowsByCategoria_Producto1() {
+                if ((this.Table.ChildRelations["Categoria_Producto1"] == null)) {
+                    return new ProductoRow[0];
+                }
+                else {
+                    return ((ProductoRow[])(base.GetChildRows(this.Table.ChildRelations["Categoria_Producto1"])));
                 }
             }
         }
