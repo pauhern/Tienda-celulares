@@ -23,6 +23,9 @@ namespace BL.Rentas
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Tipo> Tipos { get; set; }
+        public object Facturas { get; set; }
+        public object ChangeTracker { get; set; }
+        public object Save { get; set; }
         //public DbSet<Usuario> Usuarios { get; set; }
     }
 }

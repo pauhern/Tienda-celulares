@@ -26,11 +26,11 @@ namespace Tienda_de_Celulares.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Celulares;Integrated Security=" +
-            "True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True")]
-        public string CelularesConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=VideoJuegos;Integrated Securit" +
+            "y=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True")]
+        public string VideoJuegosConnectionString {
             get {
-                return ((string)(this["CelularesConnectionString"]));
+                return ((string)(this["VideoJuegosConnectionString"]));
             }
         }
     }

@@ -44,7 +44,7 @@ namespace Tienda_de_Celulares
 
             if (resultado == true)
             {
-                this.Close();
+                Close();
             }
             else
             {
