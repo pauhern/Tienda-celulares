@@ -34,6 +34,11 @@ namespace Tienda_de_Celulares
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Login();
+        }
+
+        private void Login()
+        {
             string usuario;
             string contrasena;
 
@@ -54,6 +59,23 @@ namespace Tienda_de_Celulares
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textBox1.Text != "" && e.KeyChar == (char)Keys.Enter)
+            {
+                textBox2.Focus();
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && e.KeyChar == (char)Keys.Enter)
+            {
+                Login();
+            }
 
         }
     }
