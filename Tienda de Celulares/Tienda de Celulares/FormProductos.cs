@@ -152,5 +152,21 @@ namespace Tienda_de_Celulares
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var buscar = textBox1.Text;
+
+            if (buscar != "")
+            {
+                listaProductosBindingSource.DataSource = _productos.ObtenerProductos(buscar);
+            }
+            else
+            {
+                listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+            }
+
+            listaProductosBindingSource.ResetBindings(false);
+        }
     }
 }
