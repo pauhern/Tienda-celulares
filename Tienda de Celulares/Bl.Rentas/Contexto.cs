@@ -25,6 +25,7 @@ namespace BL.Rentas
         public DbSet<Tipo> Tipos { get; set; }
         public object Facturas { get; set; }
         public object Save { get; set; }
+        public object Usuarios { get; internal set; }
         //public DbSet<Usuario> Usuarios { get; set; }
     }
 }

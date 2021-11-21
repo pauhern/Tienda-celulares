@@ -75,5 +75,7 @@ namespace Tienda_de_Celulares
             FormReporteFactura.MdiParent = this;
             FormReporteFactura.Show();
         }
+
+        
     }
 }
