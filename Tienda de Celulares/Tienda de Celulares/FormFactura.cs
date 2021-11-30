@@ -35,8 +35,8 @@ namespace Tienda_de_Celulares
         private void button1_Click(object sender, EventArgs e)
         {
             ListViewItem Item = new ListViewItem();
-            Item.Text = "Iphone X1";
-            Item.SubItems.Add("60");
+            Item.Text = "iPhone X";
+            Item.SubItems.Add("20,000");
 
             listView1.Items.Add(Item);
         }

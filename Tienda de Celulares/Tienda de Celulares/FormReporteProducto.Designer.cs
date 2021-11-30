@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.SuspendLayout();
+            crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            SuspendLayout();
             // 
             // crystalReportViewer1
             // 
